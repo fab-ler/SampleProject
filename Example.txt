@@ -33,6 +33,7 @@
         <groups>
                 <run>
                         <include name="regression"/>
+                        <exclude name="sanity"/>
                 </run>
         </groups>
 
