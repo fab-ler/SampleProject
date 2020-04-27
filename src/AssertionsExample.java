@@ -15,7 +15,7 @@ public class AssertionsExample {
         //Chrome browser
         System.setProperty("webdriver.chrome.driver", "src/Drivers/chromedriver.exe");
         driver = new ChromeDriver();
-        driver.get("https   ://opensource-demo.orangehrmlive.com/");
+        driver.get("https://opensource-demo.orangehrmlive.com/");
     }
 
     @Test
@@ -27,7 +27,7 @@ public class AssertionsExample {
     @Test
     void homePageTitleTest() {
         String title = driver.getTitle();
-        Assert.assertEquals("OrangeHRM111", title, "Title not matched");
+        Assert.assertEquals("OrangeHRM", title, "Title not matched");
     }
 
     @AfterClass(alwaysRun = true)
