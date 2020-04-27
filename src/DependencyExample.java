@@ -6,7 +6,10 @@ public class DependencyExample {
     @Test
     public void startCar() {
         System.out.println("Car started");
-        //should we fail the execution of the this test the whole chain of dependent TC will not be executed unless they are marked by an alwaysRun=ture property in test annotation
+        /*
+        should we fail the execution of the this test the whole chain of dependent TC will
+        not be executed unless they are marked by an alwaysRun=ture property in test annotation
+        */
         Assert.fail();
     }
 
