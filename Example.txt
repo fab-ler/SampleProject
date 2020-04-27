@@ -1,3 +1,6 @@
+_______________________________________________________________
+#1st iteration
+_______________________________________________________________
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
@@ -23,9 +26,9 @@
     </test>
 
 </suite>
-
-
-
+_______________________________________________________________
+#2nd iteration
+_______________________________________________________________
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
@@ -42,4 +45,53 @@
         </classes>
 
     </test>
+</suite>
+_______________________________________________________________
+#3rd iteration
+_______________________________________________________________
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="GroupingTest">
+        <groups>
+            <run>
+                <!--                <include name="regression"/>-->
+                <exclude name="regression"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="GroupingExample"/>
+        </classes>
+
+    </test>
+</suite>
+_______________________________________________________________
+#4th iteration
+_______________________________________________________________
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+    <test name="parameterstest1">
+        <classes>
+            <class name="ParametersExample"/>
+        </classes>
+
+    </test>
+
+
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+    <test name="parameterstest2">
+        <classes>
+            <class name="ParametersExample"/>
+        </classes>
+
+    </test>
+
+
 </suite>
