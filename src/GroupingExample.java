@@ -1,6 +1,6 @@
 import org.testng.annotations.Test;
 
-public class GoupingExample {
+public class GroupingExample {
     @Test(groups = {"regression"})
     void test1() {
         System.out.println("This is test1...");
