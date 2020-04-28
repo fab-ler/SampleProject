@@ -11,7 +11,7 @@ import org.testng.annotations.Test;
 
 public class ParametersExample {
 
-    WebDriver driver;
+    WebDriver driver = null;
 
     @BeforeClass
 
@@ -41,7 +41,7 @@ public class ParametersExample {
         Assert.assertEquals(title, "OrangeHRM", "Title is not matched");
     }
 
-    @AfterClass(alwaysRun = true)
+    @AfterClass
     void tearDown() {
         driver.quit();
     }
