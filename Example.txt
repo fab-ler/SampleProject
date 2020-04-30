@@ -1,3 +1,6 @@
+_______________________________________________________________
+#1st iteration
+_______________________________________________________________
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
@@ -23,9 +26,9 @@
     </test>
 
 </suite>
-
-
-
+_______________________________________________________________
+#2nd iteration
+_______________________________________________________________
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
@@ -42,4 +45,106 @@
         </classes>
 
     </test>
+</suite>
+_______________________________________________________________
+#3rd iteration
+_______________________________________________________________
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test name="GroupingTest">
+        <groups>
+            <run>
+                <!--                <include name="regression"/>-->
+                <exclude name="regression"/>
+            </run>
+        </groups>
+
+        <classes>
+            <class name="GroupingExample"/>
+        </classes>
+
+    </test>
+</suite>
+_______________________________________________________________
+#4th iteration
+_______________________________________________________________
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+
+    <test name="parameterstest1">
+        <parameter name="browser" value="firefox"/>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+        <classes>
+            <class name="ParametersExample"/>
+        </classes>
+    </test>
+
+
+    <test name="parameterstest2">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="url" value="https://opensource-demo.orangehrmlive.com/"/>
+        <classes>
+            <class name="ParametersExample"/>
+        </classes>
+    </test>
+
+</suite>
+_______________________________________________________________
+#5th iteration
+_______________________________________________________________
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="methods" thread-count="2">
+    <test name="test1">
+        <classes>
+            <class name="paralleltesting.ParallelTest1"/>
+            <class name="paralleltesting.ParallelTest2"/>
+        </classes>
+    </test>
+</suite>
+
+_______________________________________________________________
+#6th iteration - making test suites run parallel
+_______________________________________________________________
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="tests" thread-count="2">
+    <!--the 1st test suite-->
+    <test name="test1">
+        <classes>
+            <class name="paralleltesting.ParallelTest1"/>
+          </classes>
+    </test>
+
+    <!--the 2nd test suite-->
+    <test name="test2">
+        <classes>
+            <class name="paralleltesting.ParallelTest2"/>
+        </classes>
+    </test>
+
+</suite>
+
+_______________________________________________________________
+#7th iteration - add Listeners
+_______________________________________________________________
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+
+    <listeners>
+        <listener class-name="listeners.CustomListeners" />
+    </listeners>
+
+    <test name="test1">
+        <classes>
+            <class name="listeners.ListenerTest"/>
+        </classes>
+    </test>
+
 </suite>
